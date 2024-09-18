@@ -144,8 +144,8 @@ class _ContactSectionState extends State<ContactSection> {
                 ),
               ),
               InkWell(
-                onTap: () => _launchUrl(
-                    'https://www.linkedin.com/in/alok-kumar-94399028a/'),
+                onTap: () =>
+                    _launchUrl('https://www.instagram.com/alok_____gangwar/'),
                 child: Image.asset(
                   "assets/instagram.png",
                   width: 28,
