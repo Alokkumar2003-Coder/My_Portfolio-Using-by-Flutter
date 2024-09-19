@@ -35,6 +35,14 @@ const List<Map> skillItems = [
     "title": "Firebase",
   },
   {
+    "img": "assets/git.jpeg",
+    "title": "Git",
+  },
+  {
+    "img": "assets/2.jpeg",
+    "title": "GitHub",
+  },
+  {
     "img": "assets/c++.jpeg",
     "title": "C++",
   },
