@@ -28,15 +28,13 @@ List<ProjectUtils> workProjectUtils = [
     image: 'assets/projects/lg.jpeg',
     title: 'Login Page with firebase',
     subtitle: 'This is an App clone.',
-    webLink:
-        'https://github.com/Alokkumar2003-Coder/Sign-in-Page-by-using-Dart-and-Flutter',
+    webLink: 'https://loginuiclone.netlify.app/',
   ),
   ProjectUtils(
     image: 'assets/projects/wtsp.jpeg',
     title: 'WhatsApp UI/UX Design',
     subtitle: 'This is an App clone.',
-    webLink:
-        'https://github.com/Alokkumar2003-Coder/WhatsApp-Clone-by-Using-Flutter-and-Dart',
+    webLink: 'https://whtsplandingpage.netlify.app/',
   ),
   ProjectUtils(
     image: 'assets/projects/hspt.jpeg',
