@@ -201,8 +201,6 @@ class _ContactSectionState extends State<ContactSection> {
       ],
     );
   }
-
-  // Function to launch URL
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
