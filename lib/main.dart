@@ -4,12 +4,10 @@ import 'package:my_portfolio/firebase_options.dart';
 import 'package:my_portfolio/pages/home_page.dart';
 import 'package:my_portfolio/styles/theme.dart';
 
-void main() async {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+    options: DefaultFirebaseOptions.currentPlatform,);
   runApp(const MyApp());
 }
 

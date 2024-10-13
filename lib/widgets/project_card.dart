@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/utils/project_utils.dart';
-import 'package:url_launcher/url_launcher.dart'; // Import url_launcher
+import 'package:url_launcher/url_launcher.dart'; 
 
 import '../constants/colors.dart';
 
