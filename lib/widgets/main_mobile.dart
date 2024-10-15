@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
-import 'package:url_launcher/url_launcher.dart'; // Import for launching the CV URL
+import 'package:url_launcher/url_launcher.dart'; 
 
 class MainMobile extends StatelessWidget {
   const MainMobile({super.key});
@@ -24,17 +24,14 @@ class MainMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Avatar image without blurriness and black background
           ClipOval(
-            //borderRadius: BorderRadius.circular(10.0), // Optional: adds rounded corners
             child: Image.asset(
               "assets/img.jpg",
               width: screenWidth,
-              fit: BoxFit.cover, // Ensures the image covers the area without stretching
+              fit: BoxFit.cover, 
             ),
           ),
           const SizedBox(height: 20),
-          // Intro message
           const Text(
             "Hi,\nI'm Alok Kumar \nA Flutter Developer",
             style: TextStyle(
@@ -45,7 +42,6 @@ class MainMobile extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          // Download CV button
           SizedBox(
             width: 190.0,
             child: ElevatedButton(
@@ -59,8 +55,6 @@ class MainMobile extends StatelessWidget {
       ),
     );
   }
-
-  // Function to launch the CV URL
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
