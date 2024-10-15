@@ -20,10 +20,10 @@ class Footer extends StatelessWidget {
               color: CustomColor.whiteSecondary,
             ),
           ),
-          Image.asset(
-            "assets/lv1.jpeg", // Your love image path here
-            height: 24, // Adjust the size of the heart image
-            width: 24,
+          const Icon(
+            Icons.favorite, // You can use any icon you like
+            color: Colors.red, // Change the color if desired
+            size: 24, // Adjust the size of the icon
           ),
           const Text(
             "  by Alok Kumar",

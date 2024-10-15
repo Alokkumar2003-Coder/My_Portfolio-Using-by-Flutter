@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               else
                 const MainMobile(),
 
-              // SKILLS
+              // EDUCATION AND SKILLS SECTION
               Container(
                 key: navbarKeys[1],
                 width: screenWidth,
@@ -73,7 +73,21 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // title
+                    // Education section title and details
+                    const Text(
+                      "EDUCATION",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: CustomColor.whitePrimary,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const EducationSection(),
+
+                    const SizedBox(height: 50),
+
+                    // Skills section title and details
                     const Text(
                       "SKILLS",
                       style: TextStyle(
@@ -84,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 50),
 
-                    // platforms and skills
+                    // Display Skills for Desktop or Mobile
                     if (constraints.maxWidth >= kMedDesktopWidth)
                       const SkillsDesktop()
                     else
@@ -122,6 +136,71 @@ class _HomePageState extends State<HomePage> {
       key.currentContext!,
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
+    );
+  }
+}
+
+// Widget for the Education Section
+class EducationSection extends StatelessWidget {
+  const EducationSection({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center, // Center align the items
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center, // Center align the row
+          children: [
+            const CircleAvatar(
+              radius: 5,
+              backgroundColor: CustomColor.whiteSecondary, // Color of the dot
+            ),
+            const SizedBox(width: 10), // Spacing between dot and text
+            const Text(
+              "Bachelor of Computer Applications",
+              style: TextStyle(
+                fontSize: 18,
+                color: CustomColor.whiteSecondary,
+              ),
+            ),
+          ],
+        ),
+        Text(
+          "Mahatma Gandhi Jyotibhai Phule Rohilkhand University, 2022-2025",
+          style: TextStyle(
+            fontSize: 16,
+            color: CustomColor.whiteTertiary,
+          ),
+          textAlign: TextAlign.center, // Center align the text
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center, // Center align the row
+          children: [
+            const CircleAvatar(
+              radius: 5,
+              backgroundColor: CustomColor.whiteSecondary, // Color of the dot
+            ),
+            const SizedBox(width: 10), // Spacing between dot and text
+            const Text(
+              "Intermediate",
+              style: TextStyle(
+                fontSize: 18,
+                color: CustomColor.whiteSecondary,
+              ),
+            ),
+          ],
+        ),
+        Text(
+          "Kendriya Vidyalaya Air Force Bareilly, 2021-2022",
+          style: TextStyle(
+            fontSize: 16,
+            color: CustomColor.whiteTertiary,
+          ),
+          textAlign: TextAlign.center, // Center align the text
+        ),
+      ],
     );
   }
 }

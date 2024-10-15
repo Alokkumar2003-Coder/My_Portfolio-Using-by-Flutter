@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/nav_items.dart';
 import '../constants/colors.dart';
+
 class DrawerMobile extends StatelessWidget {
   const DrawerMobile({
     super.key,
     required this.onNavItemTap,
   });
+
   final Function(int) onNavItemTap;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -29,7 +32,7 @@ class DrawerMobile extends StatelessWidget {
               ),
             ),
           ),
-          for (int i = 0; i < navIcons.length; i++)
+          for (int i = 0; i < navIcons.length && i < navTitles.length; i++)
             ListTile(
               contentPadding: const EdgeInsets.symmetric(
                 horizontal: 30.0,
@@ -44,7 +47,7 @@ class DrawerMobile extends StatelessWidget {
               },
               leading: Icon(navIcons[i]),
               title: Text(navTitles[i]),
-            )
+            ),
         ],
       ),
     );

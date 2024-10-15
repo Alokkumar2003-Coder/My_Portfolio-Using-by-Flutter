@@ -120,36 +120,21 @@ class _ContactSectionState extends State<ContactSection> {
             runSpacing: 12,
             alignment: WrapAlignment.center,
             children: [
-              InkWell(
-                onTap: () =>
-                    _launchUrl('https://github.com/Alokkumar2003-Coder'),
-                child: Image.asset(
-                  "assets/github.png",
-                  width: 28,
-                ),
+              _buildSocialMediaIcon(
+                'assets/github.png',
+                () => _launchUrl('https://github.com/Alokkumar2003-Coder'),
               ),
-              InkWell(
-                onTap: () => _launchUrl(
-                    'https://www.linkedin.com/in/alok-kumar-94399028a/'),
-                child: Image.asset(
-                  "assets/linkedin.png",
-                  width: 28,
-                ),
+              _buildSocialMediaIcon(
+                'assets/linkedin.png',
+                () => _launchUrl('https://www.linkedin.com/in/alok-kumar-94399028a/'),
               ),
-              InkWell(
-                onTap: () => _launchUrl('https://x.com/alokkumar29396'),
-                child: Image.asset(
-                  "assets/tw.jpeg",
-                  width: 28,
-                ),
+              _buildSocialMediaIcon(
+                'assets/twimages.jpeg',
+                () => _launchUrl('https://x.com/alokkumar29396'),
               ),
-              InkWell(
-                onTap: () =>
-                    _launchUrl('https://www.instagram.com/alok_____gangwar/'),
-                child: Image.asset(
-                  "assets/instagram.png",
-                  width: 28,
-                ),
+              _buildSocialMediaIcon(
+                'assets/instagram.png',
+                () => _launchUrl('https://www.instagram.com/alok_____gangwar/'),
               ),
             ],
           )
@@ -201,10 +186,26 @@ class _ContactSectionState extends State<ContactSection> {
       ],
     );
   }
+
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
       throw Exception('Could not launch $url');
     }
+  }
+
+  Widget _buildSocialMediaIcon(String assetPath, VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 40,  // Fixed width
+        height: 40, // Fixed height
+        alignment: Alignment.center,
+        child: Image.asset(
+          assetPath,
+          width: 28,  // You can adjust the size here if needed
+        ),
+      ),
+    );
   }
 }
